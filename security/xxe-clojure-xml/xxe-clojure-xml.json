@@ -1,0 +1,17 @@
+[
+  {
+    "filename": "vulnerable-1.clj",
+    "findings": [
+      {
+        "row": 5,
+        "col": 3,
+        "end-row": 5,
+        "end-col": 24,
+        "parent": "vulnerable",
+        "code": "(clojure.xml/parse x)"
+      }
+    ],
+    "name": "Clojure xml XXE",
+    "message": "Usage of clojure xml parse"
+  }
+]
