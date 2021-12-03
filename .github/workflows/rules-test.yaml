@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Downloads clj-holmes
-        run: curl -L https://github.com/clj-holmes/clj-holmes/releases/latest/download/clj-holmes-ubunutu-latest -o /tmp/clj-holmes && chmod +x /tmp/clj-holmes
+        run: curl -L https://github.com/clj-holmes/clj-holmes/releases/latest/download/clj-holmes-ubuntu-latest -o /tmp/clj-holmes && chmod +x /tmp/clj-holmes
 
       - name: Download jd
         run: curl -L https://github.com/josephburnett/jd/releases/latest/download/jd-amd64-linux -o /tmp/jd && chmod +x /tmp/jd
