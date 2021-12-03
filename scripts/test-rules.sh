@@ -1,7 +1,10 @@
 #!/bin/bash
 
-echo
-echoerr() { echo "$@" 1>&2; }
+echoerr() {
+    RED='\033[0;31m'
+    NC='\033[0m' # No Color
+    echo -e "${RED}$@${NC}" 1>&2;
+}
 
 rule_path=$(dirname $1)
 rule_name="$(basename $1 | cut -d . -f1)"
