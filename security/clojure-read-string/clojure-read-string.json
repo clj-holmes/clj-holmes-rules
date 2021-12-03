@@ -1,1 +1,17 @@
-[{"filename":"security\/clojure-read-string\/clojure-read-string.clj","findings":[{"row":5,"col":3,"end-row":5,"end-col":18,"parent":"vulnerable","code":"(read-string x)"}],"name":"Usage of clojure.core\/read-string","message":"Usage of vulnerable function clojure.core\/read-string. Attackers can exploit vulnerable deserialization functions which could lead to a remote code execution."}]
+[
+  {
+    "filename": "security/clojure-read-string/clojure-read-string.clj",
+    "findings": [
+      {
+        "row": 5,
+        "col": 3,
+        "end-row": 5,
+        "end-col": 18,
+        "parent": "vulnerable",
+        "code": "(read-string x)"
+      }
+    ],
+    "name": "Usage of clojure.core/read-string",
+    "message": "Usage of vulnerable function clojure.core/read-string. Attackers can exploit vulnerable deserialization functions which could lead to a remote code execution."
+  }
+]

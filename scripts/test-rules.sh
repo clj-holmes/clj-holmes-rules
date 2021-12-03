@@ -7,16 +7,15 @@ echoerr() {
 }
 
 rule_path=$(dirname $1)
-rule_name="$(basename $1 | cut -d . -f1)"
-rule_example_code="$rule_path/"
+rule_name="$(basename ${1%.*})"
+rule_example_code="$rule_path/$rule_name.clj"
 rule_expected_output_file="$rule_path/$rule_name.json"
 
 /tmp/clj-holmes scan -p $rule_example_code -d "$1" -t json -o /tmp/$rule_name.json --no-verbose
 
 if [[ -a "$rule_example_code" && -a "$rule_expected_output_file" ]]; then
-    rule_expected_output=($(md5sum $rule_expected_output_file))
-    result=($(md5sum /tmp/$rule_name.json))
-    if [[ "$rule_expected_output" == "$result" ]]; then
+    check_equality=$(/tmp/jd "/tmp/$rule_name.json" "$rule_expected_output_file")
+    if [[ -z $check_equality ]]; then
         echo "Rule $rule_name is working as expected."
         exit 0
     else

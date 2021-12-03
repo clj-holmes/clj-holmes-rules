@@ -10,8 +10,11 @@ jobs:
       - name: Downloads clj-holmes
         run: curl -L https://github.com/clj-holmes/clj-holmes/releases/latest/download/clj-holmes-ubuntu-latest -o /tmp/clj-holmes && chmod +x /tmp/clj-holmes
 
+      - name: Download jd
+        run: curl -L https://github.com/josephburnett/jd/releases/latest/download/jd-amd64-linux -o /tmp/jd && chmod +x /tmp/jd
+
       - name: validate rules specs
         run: /tmp/clj-holmes validate-rules -d .
 
       - name: check if rules are working as expected
-        run: find . -type f -name \*.yml  -not -path '*/\.*' | xargs -I {} bash scripts/test-rules.sh {}
+        run: find . -type f -name \*.yml -not -path '*/\.*' | xargs -I {} bash scripts/test-rules.sh {}
