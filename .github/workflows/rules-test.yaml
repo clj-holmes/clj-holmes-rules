@@ -14,4 +14,4 @@ jobs:
         run: /tmp/clj-holmes validate-rules -d .
 
       - name: check if rules are working as expected
-        run: find . -type f -name \*.yml  -not -path '*/\.*' | xargs -I {} bash test-rules.sh {}
+        run: find . -type f -name \*.yml  -not -path '*/\.*' | xargs -I {} bash scripts/test-rules.sh {}
