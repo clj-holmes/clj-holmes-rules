@@ -1,6 +1,6 @@
 [
   {
-    "filename": "vulnerable-1.clj",
+    "filename": "security/xxe-clojure-xml/vulnerable-1.clj",
     "findings": [
       {
         "row": 5,

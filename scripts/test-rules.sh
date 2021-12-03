@@ -8,13 +8,15 @@ echoerr() {
 
 rule_path=$(dirname $1)
 rule_name="$(basename ${1%.*})"
-rule_example_code="$rule_path/$rule_name"
+rule_example_code="$rule_path/"
 rule_expected_output_file="$rule_path/$rule_name.json"
 
-/tmp/clj-holmes scan -p $rule_example_code -d "$1" -t json -o /tmp/$rule_name.json --no-verbose
+PATH="$PATH:/tmp"
 
-if [[ -a "$rule_example_code" && -a "$rule_expected_output_file" ]]; then
-    check_equality=$(/tmp/jd "/tmp/$rule_name.json" "$rule_expected_output_file")
+clj-holmes scan -p $rule_example_code -d "$1" -t json -o /tmp/$rule_name.json --no-verbose
+
+if [[ -a "$rule_expected_output_file" ]]; then
+    check_equality=$(jd "/tmp/$rule_name.json" "$rule_expected_output_file")
     if [[ -z $check_equality ]]; then
         echo "Rule $rule_name is working as expected."
         exit 0
