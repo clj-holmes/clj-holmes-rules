@@ -1,0 +1,14 @@
+name: Rules test
+
+on: push    
+jobs:
+  rules-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Downloads clj-holmes
+        run: sudo curl -L https://github.com/clj-holmes/clj-holmes/releases/latest/download/clj-holmes -o /usr/bin/clj-holmes && sudo chmod +x /usr/bin/clj-holmes
+      
+      - name: validate rules specs
+        run: clj-holmes validate-rules -d .
