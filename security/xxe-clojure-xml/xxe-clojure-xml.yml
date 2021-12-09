@@ -10,9 +10,6 @@
       - vulnerability
   patterns:
     - patterns:
-      - pattern-not: ($& parse $& [$&] $&)
-      - pattern-not: ($& parse $& $list&)
-    - patterns:
       - function: parse
         namespace: clojure.xml
         custom-function?: true
