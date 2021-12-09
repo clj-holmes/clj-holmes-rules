@@ -10,13 +10,14 @@
       - vulnerability
   patterns:
     - patterns:
-        - pattern-not: (defn $& parse $& [$&] $&)
+      - pattern-not: ($& parse $& [$&] $&)
+      - pattern-not: ($& parse $& $list&)
     - patterns:
-        - function: parse
-          namespace: clojure.xml
-          custom-function?: true
-          pattern: ($& $custom-function $&)
+      - function: parse
+        namespace: clojure.xml
+        custom-function?: true
+        pattern: ($& $custom-function $&)
     - patterns-either:
-        - pattern-not: (.setFeature "http://apache.org/xml/features/disallow-doctype-decl" true)
-        - pattern-not: (.setFeature "http://xml.org/sax/features/external-general-entities" false)
-        - pattern-not: (.setFeature "http://xml.org/sax/features/external-parameter-entities" false)
+      - pattern-not: (.setFeature "http://apache.org/xml/features/disallow-doctype-decl" true)
+      - pattern-not: (.setFeature "http://xml.org/sax/features/external-general-entities" false)
+      - pattern-not: (.setFeature "http://xml.org/sax/features/external-parameter-entities" false)

@@ -7,7 +7,7 @@
         "col": 3,
         "end-row": 5,
         "end-col": 24,
-        "parent": "vulnerable",
+        "parent": "vulnerable-1/vulnerable",
         "code": "(clojure.xml/parse x)"
       }
     ],
