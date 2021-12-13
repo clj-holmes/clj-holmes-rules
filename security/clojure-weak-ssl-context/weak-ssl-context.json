@@ -1,11 +1,11 @@
 [
   {
-    "filename": "Proj/clj-holmes-rules/security/clojure-weak-ssl-context/weak_context.clj",
+    "filename": "security/clojure-weak-ssl-context/weak_context.clj",
     "findings": [
       {
-        "row": 5,
+        "row": 4,
         "col": 14,
-        "end-row": 5,
+        "end-row": 4,
         "end-col": 44,
         "parent": "clojure-weak-ssl-context/context",
         "code": "(SSLContext/getInstance \"SSL\")"
