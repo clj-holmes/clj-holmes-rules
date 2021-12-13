@@ -1,0 +1,17 @@
+[
+  {
+    "filename": "security/clojure-weak-ssl-context/weak_context.clj",
+    "findings": [
+      {
+        "row": 4,
+        "col": 14,
+        "end-row": 4,
+        "end-col": 44,
+        "parent": "clojure-weak-ssl-context/context",
+        "code": "(SSLContext/getInstance \"SSL\")"
+      }
+    ],
+    "name": "Insecure SSL Context",
+    "message": "Insecure protocol for SSL Context"
+  }
+]

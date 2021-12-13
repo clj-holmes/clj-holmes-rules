@@ -1,0 +1,13 @@
+- id: rsa-weak-context
+  name: Insecure SSL Context
+  severity: warning
+  message: Insecure protocol for SSL Context
+  properties: 
+    precision: medium
+    tags:
+      - ssl
+      - certificate
+      - security
+  patterns-either:
+    - pattern: (SSLContext/getInstance "SSL")
+    - pattern: (javax.net.ssl.SSLContext/getInstance "SSL")
