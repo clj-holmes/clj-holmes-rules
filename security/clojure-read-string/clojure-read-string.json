@@ -7,7 +7,7 @@
         "col": 3,
         "end-row": 5,
         "end-col": 18,
-        "parent": "vulnerable",
+        "parent": "clojure-read-string/vulnerable",
         "code": "(read-string x)"
       }
     ],
