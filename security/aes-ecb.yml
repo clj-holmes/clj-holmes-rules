@@ -1,0 +1,18 @@
+- id: aes-ecb
+  name: AES in ECB mode
+  severity: error
+  message: ECB should not be used as mode of operation, GCM should be used instead
+  properties:
+    precision: medium
+    tags:
+      - security
+      - vulnerability
+  patterns-either:
+    - pattern: (Cipher/getInstance "AES/ECB/NoPadding")
+    - pattern: (Cipher/getInstance "AES/ECB/PKCS7Padding")
+    - pattern: (Cipher/getInstance "AES/ECB/PKCS5Padding")
+    - pattern: (Cipher/getInstance "AES/ECB/ISO10126-2Padding")
+    - pattern: (Cipher/getInstance "AES/ECB/ISO7816-4Padding")
+    - pattern: (Cipher/getInstance "AES/ECB/TBCPadding")
+    - pattern: (Cipher/getInstance "AES/ECB/X9.23Padding")
+    - pattern: (Cipher/getInstance "AES/ECB/ZeroBytePadding")
