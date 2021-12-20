@@ -1,0 +1,12 @@
+- id: ecb-mode-of-operation
+  name: ECB mode of operation
+  severity: error
+  message: ECB lacks diffusion and should not be used as mode of operation, GCM/CTR/CCM should be preferred instead
+  properties:
+    precision: medium
+    tags:
+      - security
+      - vulnerability
+  patterns-either:
+    - pattern: (Cipher/getInstance "*/ECB/*")
+      interpret-regex?: true
