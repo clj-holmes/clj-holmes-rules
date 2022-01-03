@@ -9,4 +9,8 @@
       - vulnerability
   patterns-either:
     - pattern: (MessageDigest/getInstance "SHA1")
+    - pattern: (MessageDigest/getInstance org.apache.commons.codec.digest.MessageDigestAlgorithms/SHA_1)
+    - pattern: (MessageDigest/getInstance MessageDigestAlgorithms/SHA_1)
     - pattern: (java.security.MessageDigest/getInstance "SHA1")
+    - pattern: (java.security.MessageDigest/getInstance org.apache.commons.codec.digest.MessageDigestAlgorithms/SHA_1)
+    - pattern: (java.security.MessageDigest/getInstance MessageDigestAlgorithms/SHA_1)
