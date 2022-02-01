@@ -5,4 +5,4 @@
   (Cipher/getInstance "Blowfish/CBC/PKCS5Padding"))
 
 (defn not-vulnerable []
-  (Cipher/getInstance "RSA/ECB/PKCS1Padding"))
+  (Cipher/getInstance "RSA/CBC/PKCS1Padding"))
