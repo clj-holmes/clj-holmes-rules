@@ -1,6 +1,6 @@
 [
   {
-    "filename": "/home/nix/dev/nu/clj-holmes-rules-public/security/ecb-mode-of-operation/ecb-mode-of-operation.clj",
+    "filename": "security/ecb-mode-of-operation/ecb-mode-of-operation.clj",
     "findings": [
       {
         "row": 5,
