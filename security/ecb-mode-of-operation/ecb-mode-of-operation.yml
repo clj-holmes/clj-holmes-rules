@@ -8,5 +8,5 @@
       - security
       - vulnerability
   patterns-either:
-    - pattern: (Cipher/getInstance "*/ECB/*")
+    - pattern: "(Cipher/getInstance #\".*/ECB/.*\")"
       interpret-regex?: true

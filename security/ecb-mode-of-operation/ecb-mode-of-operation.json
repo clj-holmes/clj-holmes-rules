@@ -1,0 +1,17 @@
+[
+  {
+    "filename": "/home/nix/dev/nu/clj-holmes-rules-public/security/ecb-mode-of-operation/ecb-mode-of-operation.clj",
+    "findings": [
+      {
+        "row": 5,
+        "col": 13,
+        "end-row": 5,
+        "end-col": 56,
+        "parent": "vulnerable.clj/encrypt-vulnerable",
+        "code": "(Cipher/getInstance \"RSA/ECB/PKCS1Padding\")"
+      }
+    ],
+    "name": "ECB mode of operation",
+    "message": "ECB lacks diffusion and should not be used as mode of operation, GCM/CTR/CCM should be preferred instead"
+  }
+]
