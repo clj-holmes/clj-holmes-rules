@@ -1,11 +1,11 @@
 [
   {
-    "filename": "/home/nix/dev/nu/clj-holmes-rules-public/security/deprecated-blowfish/deprecated-blowfish.clj",
+    "filename": "security/deprecated-blowfish/deprecated-blowfish.clj",
     "findings": [
       {
-        "row": 6,
+        "row": 5,
         "col": 3,
-        "end-row": 6,
+        "end-row": 5,
         "end-col": 51,
         "parent": "deprecated-blowfish/vulnerable",
         "code": "(Cipher/getInstance \"Blowfish/CBC/PKCS5Padding\")"
