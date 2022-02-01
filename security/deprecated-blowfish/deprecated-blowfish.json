@@ -1,0 +1,17 @@
+[
+  {
+    "filename": "/home/nix/dev/nu/clj-holmes-rules-public/security/deprecated-blowfish/deprecated-blowfish.clj",
+    "findings": [
+      {
+        "row": 6,
+        "col": 3,
+        "end-row": 6,
+        "end-col": 51,
+        "parent": "deprecated-blowfish/vulnerable",
+        "code": "(Cipher/getInstance \"Blowfish/CBC/PKCS5Padding\")"
+      }
+    ],
+    "name": "Inadequate Encryption Strength",
+    "message": "Blowfish is considered deprecated due to its small block size, AES is the recommended cipher"
+  }
+]
