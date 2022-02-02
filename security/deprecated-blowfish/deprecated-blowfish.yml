@@ -10,3 +10,5 @@
   patterns-either:
     - pattern: "(Cipher/getInstance #\"Blowfish/.*/.*\")"
       interpret-regex?: true
+    - pattern: "(javax.crypto.Cipher/getInstance #\"Blowfish/.*/.*\")"
+      interpret-regex?: true
