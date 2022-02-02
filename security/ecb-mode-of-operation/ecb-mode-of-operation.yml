@@ -10,3 +10,5 @@
   patterns-either:
     - pattern: "(Cipher/getInstance #\".*/ECB/.*\")"
       interpret-regex?: true
+    - pattern: "(javax.crypto.Cipher/getInstance #\".*/ECB/.*\")"
+      interpret-regex?: true
