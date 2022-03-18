@@ -7,9 +7,12 @@
     tags:
       - security
       - vulnerability
-  patterns-either:
-    - pattern: "($& read-string $&)"
-    - pattern: "($& $custom-function $&)"
-      namespace: clojure.core
-      function: read-string
-      custom-function?: true
+  patterns:
+    - patterns:
+      - pattern-not: "(defn read-string $&)"
+    - patterns-either:
+      - pattern: "($& read-string $&)"
+      - pattern: "($& $custom-function $&)"
+        namespace: clojure.core
+        function: read-string
+        custom-function?: true
